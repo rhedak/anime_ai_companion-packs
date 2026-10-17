@@ -1,0 +1,225 @@
+name: Publish pack
+
+# Builds a lossless patch archive, attaches it to a GitHub Release, writes the pack into site/index.json,
+# and publishes site/ with GitHub Pages.
+#
+# Needs Pages set to "GitHub Actions" once, in the repository settings (Settings, Pages, Source).
+# The pack-archive tool is the one in rhedak/anime_ai_companion. COMPANION_REF is the head of
+# https://github.com/rhedak/anime_ai_companion/pull/10 (branch cursor/pack-archive-index-ef5f).
+# src/pack-archive-cli.ts is not on main or dev yet. Point COMPANION_REF at the merged commit once that PR lands.
+
+on:
+  workflow_dispatch:
+    inputs:
+      pack_id:
+        description: Pack id (folder name under packs-src/)
+        required: true
+        type: string
+      version:
+        description: Pack version, such as 1 or 1.2.3
+        required: true
+        type: string
+  push:
+    tags:
+      - "*-v*"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  COMPANION_REPO: rhedak/anime_ai_companion
+  COMPANION_REF: fea973c7e647794fdde2e215c4adb9257b464e5e
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve the pack id and version
+        id: pack
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          INPUT_ID: ${{ inputs.pack_id }}
+          INPUT_VERSION: ${{ inputs.version }}
+          REF_NAME: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            ID="$INPUT_ID"
+            VER="$INPUT_VERSION"
+          else
+            TAG="$REF_NAME"
+            if [[ ! "$TAG" =~ ^([A-Za-z0-9][A-Za-z0-9._-]{0,39})-v([0-9]+(\.[0-9]+){0,2})$ ]]; then
+              echo "Tag '$TAG' does not match <pack-id>-v<version> (version is 1 or 1.2.3)." >&2
+              exit 1
+            fi
+            ID="${BASH_REMATCH[1]}"
+            VER="${BASH_REMATCH[2]}"
+          fi
+          if [[ ! "$ID" =~ ^[A-Za-z0-9][A-Za-z0-9._-]{0,39}$ ]] || [[ "$ID" == *..* ]]; then
+            echo "Pack id '$ID' is not a folder name this workflow can put in a tag. Use letters, digits, and . _ - , with no '..' and no spaces." >&2
+            exit 1
+          fi
+          if [[ ! "$VER" =~ ^[0-9]+(\.[0-9]+){0,2}$ ]]; then
+            echo "Version '$VER' must look like 1 or 1.2.3." >&2
+            exit 1
+          fi
+          if [ ! -d "packs-src/$ID" ]; then
+            echo "There is no packs-src/$ID folder on this commit." >&2
+            exit 1
+          fi
+          if [ ! -f "packs-src/$ID.publish.json" ]; then
+            echo "There is no packs-src/$ID.publish.json (name, description, credit, aiMade)." >&2
+            exit 1
+          fi
+          echo "id=$ID" >> "$GITHUB_OUTPUT"
+          echo "version=$VER" >> "$GITHUB_OUTPUT"
+          echo "tag=${ID}-v${VER}" >> "$GITHUB_OUTPUT"
+          echo "asset=${ID}-v${VER}.tar" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout anime_ai_companion
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.COMPANION_REPO }}
+          ref: ${{ env.COMPANION_REF }}
+          path: .companion
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .companion/package-lock.json
+
+      - name: Require the Node version the pack-archive tool declares
+        run: |
+          node -e 'const [major, minor] = process.versions.node.split(".").map(Number); if (major < 22 || (major === 22 && minor < 18)) { console.error("anime_ai_companion requires Node >= 22.18 (engine-strict). This runner has " + process.version); process.exit(1); }'
+
+      - name: Install the pack-archive tool
+        working-directory: .companion
+        run: npm ci
+
+      - name: Build the patch archive
+        env:
+          PACK_ID: ${{ steps.pack.outputs.id }}
+          PACK_ASSET: ${{ steps.pack.outputs.asset }}
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          node .companion/src/pack-archive-cli.ts build "packs-src/${PACK_ID}" -o "dist/${PACK_ASSET}"
+
+      - name: Write the index entry and check sha256 and size
+        env:
+          PACK_ID: ${{ steps.pack.outputs.id }}
+          PACK_VERSION: ${{ steps.pack.outputs.version }}
+          PACK_TAG: ${{ steps.pack.outputs.tag }}
+          PACK_ASSET: ${{ steps.pack.outputs.asset }}
+        run: |
+          set -euo pipefail
+          URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/${PACK_TAG}/${PACK_ASSET}"
+          node scripts/write-index-entry.mjs \
+            "dist/${PACK_ASSET}" \
+            "packs-src/${PACK_ID}.publish.json" \
+            "$PACK_VERSION" \
+            "$URL" \
+            ".companion/src/pack-archive-cli.ts" \
+            "$PACK_ID" > /tmp/entry.json
+          SHA=$(node -p "JSON.parse(require('fs').readFileSync('/tmp/entry.json','utf8')).packs[0].hashes.sha256")
+          BYTES=$(node -p "JSON.parse(require('fs').readFileSync('/tmp/entry.json','utf8')).packs[0].sizes.archiveBytes")
+          echo "sha256=$SHA" >> "$GITHUB_ENV"
+          echo "archive_bytes=$BYTES" >> "$GITHUB_ENV"
+          {
+            echo "### ${PACK_TAG}"
+            echo
+            echo "- sha256: \`${SHA}\`"
+            echo "- archive bytes: ${BYTES}"
+            echo "- url: ${URL}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Create the GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACK_ID: ${{ steps.pack.outputs.id }}
+          PACK_VERSION: ${{ steps.pack.outputs.version }}
+          PACK_TAG: ${{ steps.pack.outputs.tag }}
+          PACK_ASSET: ${{ steps.pack.outputs.asset }}
+        run: |
+          set -euo pipefail
+          if git rev-parse -q --verify "refs/tags/${PACK_TAG}" >/dev/null; then
+            if [ "$(git rev-parse "${PACK_TAG}^{commit}")" != "$(git rev-parse HEAD)" ]; then
+              echo "Tag ${PACK_TAG} already points at $(git rev-parse "${PACK_TAG}^{commit}"), not $(git rev-parse HEAD)." >&2
+              exit 1
+            fi
+          else
+            git tag "${PACK_TAG}"
+            git push origin "refs/tags/${PACK_TAG}"
+          fi
+          {
+            echo "Lossless patch archive for picture pack ${PACK_ID}, version ${PACK_VERSION}."
+            echo
+            echo "- sha256: \`${sha256}\`"
+            echo "- archive bytes: ${archive_bytes}"
+            echo "- built from \`packs-src/${PACK_ID}\` at \`${GITHUB_SHA}\`"
+          } > /tmp/notes.md
+          if gh release view "${PACK_TAG}" >/dev/null 2>&1; then
+            gh release upload "${PACK_TAG}" "dist/${PACK_ASSET}" --clobber
+            gh release edit "${PACK_TAG}" --notes-file /tmp/notes.md
+          else
+            gh release create "${PACK_TAG}" "dist/${PACK_ASSET}" --title "${PACK_TAG}" --notes-file /tmp/notes.md --verify-tag
+          fi
+
+      - name: Update site/index.json on main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PACK_ID: ${{ steps.pack.outputs.id }}
+          PACK_VERSION: ${{ steps.pack.outputs.version }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          if git cat-file -e origin/main:site/index.json 2>/dev/null; then
+            git show origin/main:site/index.json > /tmp/index.json
+          else
+            printf '%s\n' '{ "format": 1, "packs": [] }' > /tmp/index.json
+          fi
+          node scripts/merge-index.mjs /tmp/index.json /tmp/entry.json
+          node scripts/check-index.mjs /tmp/index.json .companion
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B main origin/main
+          mkdir -p site
+          cp /tmp/index.json site/index.json
+          git add site/index.json
+          if git diff --cached --quiet; then
+            echo "site/index.json already lists this archive."
+          else
+            git commit -m "Publish ${PACK_ID} version ${PACK_VERSION}."
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Upload the Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
