@@ -23,6 +23,29 @@
         "id": "franzi",
         "name": "Franzi"
       }
+    },
+    {
+      "id": "franzi-pajamas",
+      "name": "Franzi (pajamas)",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 4465664,
+        "framesBytes": 15142742
+      },
+      "hashes": {
+        "sha256": "782f97d9a1e1826c0ed8449b2a7c999d2891702a5b23ed242e35eccde106a742"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/franzi-pajamas-v1/franzi-pajamas-v1.tar",
+      "description": "An original character, Franzi, in pajamas: a lavender short-sleeved button-up top with a small lapel collar, lavender frilled shorts and white slippers, and black hair in a high ponytail. The pictures were made with AI.",
+      "credit": "Franzi (pajamas): an original character, pictures made with AI (Grok Imagine).",
+      "aiMade": true,
+      "character": {
+        "id": "franzi",
+        "name": "Franzi"
+      }
     }
   ]
 }
