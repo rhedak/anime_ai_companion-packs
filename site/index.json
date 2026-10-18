@@ -1,4 +1,28 @@
 {
   "format": 1,
-  "packs": []
+  "packs": [
+    {
+      "id": "franzi-casual",
+      "name": "Franzi (casual)",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 4931584,
+        "framesBytes": 16793826
+      },
+      "hashes": {
+        "sha256": "64e5a7078b2e9872ee57e3a101b35517247625479f62cb3511cccedc700ac4f7"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/franzi-casual-v1/franzi-casual-v1.tar",
+      "description": "An original character, Franzi, in a casual outfit: a soft pink open cardigan over a plain white T-shirt and a pleated cream skirt, with black hair in a high ponytail tied with a dark red bow. The pictures were made with AI.",
+      "credit": "Franzi (casual): an original character, pictures made with AI (Grok Imagine).",
+      "aiMade": true,
+      "character": {
+        "id": "franzi",
+        "name": "Franzi"
+      }
+    }
+  ]
 }
