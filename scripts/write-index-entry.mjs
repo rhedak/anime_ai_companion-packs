@@ -11,7 +11,7 @@ if (!archive || !metaPath || !version || !url || !cli || !expectedId) {
 }
 
 const meta = JSON.parse(readFileSync(metaPath, "utf8"));
-const allowed = new Set(["name", "description", "credit", "thumbnail", "aiMade"]);
+const allowed = new Set(["name", "description", "credit", "thumbnail", "aiMade", "character"]);
 for (const key of Object.keys(meta)) {
   if (!allowed.has(key)) {
     console.error(`${metaPath} has ${key}, which is not a publish field.`);
@@ -47,6 +47,8 @@ if (!entry) {
   process.exit(1);
 }
 if (meta.aiMade === false) entry.aiMade = false;
+// The pack-archive tool does not know the character: it is copied from the publish file, and the app's index check validates it.
+if (meta.character !== undefined) entry.character = meta.character;
 if (entry.id !== expectedId) {
   console.error(`The archive id is "${entry.id}". The folder name, and the pack id, is "${expectedId}".`);
   process.exit(1);

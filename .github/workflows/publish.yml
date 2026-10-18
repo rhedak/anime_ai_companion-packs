@@ -4,9 +4,8 @@ name: Publish pack
 # and publishes site/ with GitHub Pages.
 #
 # Needs Pages set to "GitHub Actions" once, in the repository settings (Settings, Pages, Source).
-# The pack-archive tool is the one in rhedak/anime_ai_companion. COMPANION_REF is the head of
-# https://github.com/rhedak/anime_ai_companion/pull/10 (branch cursor/pack-archive-index-ef5f).
-# src/pack-archive-cli.ts is not on main or dev yet. Point COMPANION_REF at the merged commit once that PR lands.
+# The pack-archive tool is the one in rhedak/anime_ai_companion. COMPANION_REF is a commit of its dev branch that has the tool, look.txt in
+# archives and the index's `character` field. Move it to a release commit of the app when a pack needs something newer.
 
 on:
   workflow_dispatch:
@@ -34,7 +33,7 @@ concurrency:
 
 env:
   COMPANION_REPO: rhedak/anime_ai_companion
-  COMPANION_REF: fea973c7e647794fdde2e215c4adb9257b464e5e
+  COMPANION_REF: ac01828a54f0ab1e9eafd48e7c3c4757932e7e6f
 
 jobs:
   publish:
