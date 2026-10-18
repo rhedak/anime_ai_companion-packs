@@ -6,7 +6,7 @@ This repository keeps the plain frames a pack is built from. Publishing turns on
 
 ## Licence
 
-[MIT](LICENSE), the same licence as anime_ai_companion. It covers this repository and the original-character packs (Franzi).
+[MIT](LICENSE), the same licence as anime_ai_companion. It covers this repository and the original-character packs (Franzi). **The exception is `packs-src/miku/`**: Hatsune Miku is Crypton Future Media's character, shown as unofficial fan art for non-commercial use under the Piapro Character License (see that folder's `NOTICE.md`). The app downloads it on request; it is not part of the app's own files.
 
 Each pack carries its own `NOTICE.md` and `credit.txt`, and those files are stored in the archive. The notice is the terms that travel with the pictures. For these original-character packs the notice includes this caveat about AI-made pictures, quoted from `packs-src/franzi-pajamas/NOTICE.md`:
 

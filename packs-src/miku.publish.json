@@ -1,0 +1,8 @@
+{
+  "name": "Hatsune Miku",
+  "description": "Unofficial fan art of Hatsune Miku (Crypton Future Media), as a small chibi with her usual outfit. For non-commercial use only, under the Piapro Character License: read the NOTICE that comes with the pack. The pictures were made with AI.",
+  "credit": "Hatsune Miku © Crypton Future Media, INC. www.piapro.net",
+  "aiMade": true,
+  "thumbnail": "thumbs/miku.webp",
+  "character": { "id": "miku", "name": "Miku" }
+}
