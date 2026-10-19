@@ -1,0 +1,55 @@
+name: Publish demo frames
+
+# Redeploys the Pages site with the loose frames and pack.json of every published pack (see scripts/stage-demo-frames.sh), without building or
+# releasing anything: for when the demo's files need to be rebuilt (a new tool pin, a repaired pack.json). Publishing a pack does the same itself.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  COMPANION_REPO: rhedak/anime_ai_companion
+  COMPANION_REF: 994b6dc6b9d26ff15d680ac8da18147d0fbb9f38
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ env.COMPANION_REPO }}
+          ref: ${{ env.COMPANION_REF }}
+          path: .companion
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .companion/package-lock.json
+      - run: npm ci
+        working-directory: .companion
+      - run: scripts/stage-demo-frames.sh
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -211,19 +211,7 @@ jobs:
       # frames, NOTICE.md and credit.txt, and a pack.json that says which picture is which. They are copied into the Pages artifact, never committed, and
       # for every pack the index lists, because a deploy replaces the whole site.
       - name: Add the loose frames and pack.json to the site
-        run: |
-          set -euo pipefail
-          for id in $(node -p "JSON.parse(require('fs').readFileSync('site/index.json','utf8')).packs.map((p) => p.id).join(' ')"); do
-            if [ ! -d "packs-src/$id" ]; then
-              echo "No packs-src/$id on this commit: $id has no frames on the site." >&2
-              continue
-            fi
-            mkdir -p "site/frames/$id"
-            cp "packs-src/$id"/*.webp "site/frames/$id/"
-            for extra in NOTICE.md credit.txt; do [ -f "packs-src/$id/$extra" ] && cp "packs-src/$id/$extra" "site/frames/$id/"; done
-            node .companion/src/pack-archive-cli.ts manifest "packs-src/$id" -o "site/frames/$id/pack.json"
-          done
-          du -sh site/frames
+        run: scripts/stage-demo-frames.sh
 
       - name: Upload the Pages artifact
         uses: actions/upload-pages-artifact@v3
