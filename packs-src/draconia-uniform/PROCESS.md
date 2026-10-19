@@ -9,9 +9,7 @@
 
 1. **Design and base picture.** The repository's owner designed Draconia (long platinum-blonde hair with a side
    braid, teal-green eyes, an earring, a black hooded robe with green lining over a white shirt, a green-and-silver
-   striped tie, a grey vest and a grey pleated skirt) and made the neutral base picture with xAI's Grok Imagine
-   (base post `b719bfd8-ac59-4368-81b1-c71c765a9e4a`), made from the source post
-   `3cee5f9b-b259-4ab0-b225-07f637c9c5a1`. It is framed from the head to just below the skirt. The pictures came
+   striped tie, a grey vest and a grey pleated skirt) and made the neutral base picture with xAI's Grok Imagine. It is framed from the head to just below the skirt. The pictures came
    out at 1152 × 1728 on a flat hot-pink background (about RGB 213, 3, 107). Nothing on her is pink, and her robe
    is near-black, so the background was cut by its colour rather than by its darkness (step 4).
 2. **Emotions and poses.** Each of the six other emotions (`happy`, `sad`, `angry`, `surprised`, `shy`,
