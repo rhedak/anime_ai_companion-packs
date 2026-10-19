@@ -70,7 +70,8 @@
       "character": {
         "id": "franzi",
         "name": "Franzi"
-      }
+      },
+      "thumbnail": "thumbs/franzi-casual.webp"
     },
     {
       "id": "franzi-pajamas",
@@ -93,7 +94,8 @@
       "character": {
         "id": "franzi",
         "name": "Franzi"
-      }
+      },
+      "thumbnail": "thumbs/franzi-pajamas.webp"
     },
     {
       "id": "miku",
