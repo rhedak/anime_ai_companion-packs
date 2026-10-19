@@ -2,6 +2,30 @@
   "format": 1,
   "packs": [
     {
+      "id": "draconia-uniform",
+      "name": "Draconia Malfoid (uniform)",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 3856384,
+        "framesBytes": 12851918
+      },
+      "hashes": {
+        "sha256": "ea618d04833d594d828459a64c9fbfaaa997d94a6f6758332ebfc4522b14304f"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/draconia-uniform-v1/draconia-uniform-v1.tar",
+      "description": "An unofficial, non-commercial fan character, Draconia Malfoid, loosely inspired by Draco Malfoy: a 21-year-old adult woman in a black hooded robe, green-and-silver tie, grey vest and skirt. Not affiliated with Warner Bros. or Wizarding World. A proud, sharp-tongued tsundere, secretly caring. The pictures were made with AI.",
+      "thumbnail": "thumbs/draconia-uniform.webp",
+      "credit": "Draconia Malfoid (uniform): an unofficial, non-commercial fan character, pictures made with AI (Grok Imagine).",
+      "aiMade": true,
+      "character": {
+        "id": "draconia",
+        "name": "Draconia Malfoid"
+      }
+    },
+    {
       "id": "franzi-bikini",
       "name": "Franzi (bikini)",
       "version": "1",
