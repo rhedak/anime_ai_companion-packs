@@ -16,13 +16,13 @@ Each pack carries its own `NOTICE.md` and `credit.txt`, and those files are stor
 
 | Path | What it is |
 | --- | --- |
-| `packs-src/<id>/` | A flat folder of lossless WebP frames, plus `credit.txt` and `NOTICE.md`. `PROCESS.md` is included when the pack has one. This is the input to the pack-archive tool. |
-| `packs-src/<id>.publish.json` | Text for the index entry: `name`, `description`, `credit`, `aiMade`, and an optional `thumbnail` https URL. It sits beside the folder. The archive tool refuses a file it does not know, so this metadata is kept out of the frame folder. |
+| `packs-src/<id>/` | A flat folder of lossless WebP frames, plus `credit.txt`, `NOTICE.md`, and `look.txt`. `PROCESS.md` is included when the pack has one. This is the input to the pack-archive tool. |
+| `packs-src/<id>.publish.json` | Text for the index entry: `name`, `description`, `credit`, `aiMade`, `character`, and an optional `thumbnail` (`thumbs/<id>.webp` next to the index, or an https URL). It sits beside the folder. The archive tool refuses a file it does not know, so this metadata is kept out of the frame folder. |
 | `site/index.json` | The manifest the app will fetch. Format `1`, the document [`parsePackIndex`](https://github.com/rhedak/anime_ai_companion/blob/fea973c7e647794fdde2e215c4adb9257b464e5e/src/pack-index.ts) checks. |
 | `site/index.schema.json` | A verbatim copy of `packs/index.schema.json` from anime_ai_companion at `fea973c7e647794fdde2e215c4adb9257b464e5e` (the head of pull request #10). |
 | `.github/workflows/publish.yml` | Builds the archive, publishes the Release, updates the index, and deploys `site/`. |
 
-`franzi-pajamas` is the example source: 39 lossless WebP frames (15,142,742 bytes of pictures) plus `NOTICE.md`, `credit.txt`, and `PROCESS.md`, extracted from the pack folder as plain files. No Release has been published for it, so [`site/index.json`](site/index.json) lists no packs. The entry is written when `franzi-pajamas-v1` (or a later version) is published. `packs-src/franzi-pajamas.publish.json` holds the gallery name and the credit line from `credit.txt` for that run.
+`franzi-pajamas` is the example source: 39 lossless WebP frames (15,142,742 bytes of pictures) plus `NOTICE.md`, `credit.txt`, `PROCESS.md`, and `look.txt`. `franzi-casual` and `franzi-bikini` are further outfits of the same character (publish field `character.id` `franzi`), with the same 39 frame names at 940×1070. `miku` is a separate character. [`site/index.json`](site/index.json) gains an entry when that pack's release is published. `franzi-casual`, `franzi-pajamas`, and `miku` are published; `franzi-bikini` stays out of the index until `franzi-bikini-v1` is published. Each `packs-src/<id>.publish.json` holds the gallery name, the credit line from `credit.txt`, and the character. `franzi-bikini`, like `miku`, points `thumbnail` at `thumbs/<id>.webp` beside the index.
 
 ## How a pack is published
 

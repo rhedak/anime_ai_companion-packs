@@ -1,0 +1,8 @@
+{
+  "name": "Franzi (bikini)",
+  "description": "An original character, Franzi, in a white halter bikini, with black hair in a low ponytail and no bow. The pictures were made with AI.",
+  "credit": "Franzi (bikini): an original character, pictures made with AI (Grok Imagine).",
+  "aiMade": true,
+  "thumbnail": "thumbs/franzi-bikini.webp",
+  "character": { "id": "franzi", "name": "Franzi" }
+}
