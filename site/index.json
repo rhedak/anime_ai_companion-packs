@@ -46,6 +46,30 @@
         "id": "franzi",
         "name": "Franzi"
       }
+    },
+    {
+      "id": "miku",
+      "name": "Hatsune Miku",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 720,
+        "height": 819,
+        "archiveBytes": 6297600,
+        "framesBytes": 14119564
+      },
+      "hashes": {
+        "sha256": "b3ef19fd961d3c5c7051eeee4119402990e79d8e58be6c3e7978d45e3caaa824"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/miku-v1/miku-v1.tar",
+      "description": "Unofficial fan art of Hatsune Miku (Crypton Future Media), as a small chibi with her usual outfit. For non-commercial use only, under the Piapro Character License: read the NOTICE that comes with the pack. The pictures were made with AI.",
+      "thumbnail": "thumbs/miku.webp",
+      "credit": "Hatsune Miku © Crypton Future Media, INC. www.piapro.net",
+      "aiMade": true,
+      "character": {
+        "id": "miku",
+        "name": "Miku"
+      }
     }
   ]
 }
