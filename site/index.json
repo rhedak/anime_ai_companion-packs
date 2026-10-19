@@ -2,6 +2,30 @@
   "format": 1,
   "packs": [
     {
+      "id": "franzi-bikini",
+      "name": "Franzi (bikini)",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 4421632,
+        "framesBytes": 15078150
+      },
+      "hashes": {
+        "sha256": "c4389f8d1e5ae28491b80ee98328e86f0462cf877b5544c24e028f9867108556"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/franzi-bikini-v1/franzi-bikini-v1.tar",
+      "description": "An original character, Franzi, in a white halter bikini, with black hair in a low ponytail and no bow. The pictures were made with AI.",
+      "thumbnail": "thumbs/franzi-bikini.webp",
+      "credit": "Franzi (bikini): an original character, pictures made with AI (Grok Imagine).",
+      "aiMade": true,
+      "character": {
+        "id": "franzi",
+        "name": "Franzi"
+      }
+    },
+    {
       "id": "franzi-casual",
       "name": "Franzi (casual)",
       "version": "1",
