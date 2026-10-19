@@ -24,6 +24,8 @@ Each pack carries its own `NOTICE.md` and `credit.txt`, and those files are stor
 
 `franzi-pajamas` is the example source: 39 lossless WebP frames (15,142,742 bytes of pictures) plus `NOTICE.md`, `credit.txt`, `PROCESS.md`, and `look.txt`. `franzi-casual` and `franzi-bikini` are further outfits of the same character (publish field `character.id` `franzi`), with the same 39 frame names at 940×1070. `miku` and `draconia-uniform` are separate characters (`character.id` `miku` and `draconia`; Draconia is not an outfit of Franzi). [`site/index.json`](site/index.json) gains an entry when that pack's release is published. `franzi-casual`, `franzi-pajamas`, `franzi-bikini`, and `miku` are published; `draconia-uniform` stays out of the index until `draconia-uniform-v1` is published. Each `packs-src/<id>.publish.json` holds the gallery name, the credit line from `credit.txt`, and the character. `franzi-bikini`, `miku`, and `draconia-uniform` point `thumbnail` at `thumbs/<id>.webp` beside the index.
 
+`packs-src/characters/<id>.txt` is the shared description the demo manifest reads from beside the pack folder (first line the name, then the text, and an optional `default: <pack>`). It copies the character id into `pack.json`. Franzi's and Miku's descriptions already live in the app, so this repository had no `characters/` folder until Draconia. Hers is `packs-src/characters/draconia.txt`, with `default: draconia-uniform`. The frame archive does not include that file.
+
 ## How a pack is published
 
 1. Add `packs-src/<id>/` and `packs-src/<id>.publish.json` on `main`. The id is the folder name the app installs under `data/frames/`. Tags use letters, digits, `.`, `_`, and `-` (no spaces, and no `..`).

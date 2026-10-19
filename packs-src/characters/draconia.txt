@@ -1,0 +1,3 @@
+Draconia Malfoid
+An unofficial, non-commercial fan character loosely inspired by Draco Malfoy, and not affiliated with Warner Bros. or Wizarding World. Long platinum-blonde hair falling loose past the shoulders, with a thin braid down one side, teal-green eyes, and a small dangling earring.
+default: draconia-uniform
