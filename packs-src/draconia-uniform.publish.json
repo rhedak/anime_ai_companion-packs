@@ -1,0 +1,11 @@
+{
+  "name": "Draconia Malfoid (uniform)",
+  "description": "An unofficial, non-commercial fan character, Draconia Malfoid, loosely inspired by Draco Malfoy: a 21-year-old adult woman in a black hooded robe, green-and-silver tie, grey vest and skirt. Not affiliated with Warner Bros. or Wizarding World. A proud, sharp-tongued tsundere, secretly caring. The pictures were made with AI.",
+  "credit": "Draconia Malfoid (uniform): an unofficial, non-commercial fan character, pictures made with AI (Grok Imagine).",
+  "aiMade": true,
+  "thumbnail": "thumbs/draconia-uniform.webp",
+  "character": {
+    "id": "draconia",
+    "name": "Draconia Malfoid"
+  }
+}
