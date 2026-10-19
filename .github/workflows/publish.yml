@@ -4,7 +4,7 @@ name: Publish pack
 # and publishes site/ with GitHub Pages.
 #
 # Needs Pages set to "GitHub Actions" once, in the repository settings (Settings, Pages, Source).
-# The pack-archive tool is the one in rhedak/anime_ai_companion. COMPANION_REF is a commit of its dev branch that has the tool, look.txt in
+# The pack-archive tool is the one in rhedak/anime_ai_companion. COMPANION_REF is a commit of its dev branch that has the tool (its `manifest` command too), look.txt in
 # archives and the index's `character` field. Move it to a release commit of the app when a pack needs something newer.
 
 on:
@@ -33,7 +33,7 @@ concurrency:
 
 env:
   COMPANION_REPO: rhedak/anime_ai_companion
-  COMPANION_REF: ac01828a54f0ab1e9eafd48e7c3c4757932e7e6f
+  COMPANION_REF: 994b6dc6b9d26ff15d680ac8da18147d0fbb9f38
 
 jobs:
   publish:
@@ -206,6 +206,24 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+      # A page cannot fetch a Release asset (no CORS headers), so the browser demo of anime_ai_companion shows a pack from loose files here: the lossless
+      # frames, NOTICE.md and credit.txt, and a pack.json that says which picture is which. They are copied into the Pages artifact, never committed, and
+      # for every pack the index lists, because a deploy replaces the whole site.
+      - name: Add the loose frames and pack.json to the site
+        run: |
+          set -euo pipefail
+          for id in $(node -p "JSON.parse(require('fs').readFileSync('site/index.json','utf8')).packs.map((p) => p.id).join(' ')"); do
+            if [ ! -d "packs-src/$id" ]; then
+              echo "No packs-src/$id on this commit: $id has no frames on the site." >&2
+              continue
+            fi
+            mkdir -p "site/frames/$id"
+            cp "packs-src/$id"/*.webp "site/frames/$id/"
+            for extra in NOTICE.md credit.txt; do [ -f "packs-src/$id/$extra" ] && cp "packs-src/$id/$extra" "site/frames/$id/"; done
+            node .companion/src/pack-archive-cli.ts manifest "packs-src/$id" -o "site/frames/$id/pack.json"
+          done
+          du -sh site/frames
 
       - name: Upload the Pages artifact
         uses: actions/upload-pages-artifact@v3
