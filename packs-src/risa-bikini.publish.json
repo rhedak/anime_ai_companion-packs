@@ -1,0 +1,11 @@
+{
+  "name": "Risa (bikini)",
+  "description": "An original character, Risa, in a white halter bikini, with long straight dark red hair with bangs, green eyes and a gold hair clip. The pictures were made with AI.",
+  "credit": "Risa (bikini): an original character, pictures made with AI (Grok Imagine).",
+  "aiMade": true,
+  "thumbnail": "thumbs/risa-bikini.webp",
+  "character": {
+    "id": "risa",
+    "name": "Risa"
+  }
+}
