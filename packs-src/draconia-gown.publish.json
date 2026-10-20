@@ -1,0 +1,11 @@
+{
+  "name": "Draconia Malfoid (Yule Ball gown)",
+  "description": "An unofficial, non-commercial fan character, Draconia Malfoid, loosely inspired by Draco Malfoy: a 21-year-old adult woman in an emerald-green off-the-shoulder Yule Ball gown with silver embroidery and a silver necklace. Not affiliated with Warner Bros. or Wizarding World. A proud, sharp-tongued tsundere, secretly caring. The pictures were made with AI.",
+  "credit": "Draconia Malfoid (Yule Ball gown): an unofficial, non-commercial fan character, pictures made with AI (Grok Imagine).",
+  "aiMade": true,
+  "thumbnail": "thumbs/draconia-gown.webp",
+  "character": {
+    "id": "draconia",
+    "name": "Draconia Malfoid"
+  }
+}
