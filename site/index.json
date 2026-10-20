@@ -26,6 +26,30 @@
       }
     },
     {
+      "id": "draconia-vest",
+      "name": "Draconia Malfoid (vest)",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 3953152,
+        "framesBytes": 13107042
+      },
+      "hashes": {
+        "sha256": "502f7506ff9f1f12e868f56ce2127ad18bccc72d212579ef7e61a8b8f50c0730"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/draconia-vest-v1/draconia-vest-v1.tar",
+      "description": "An unofficial, non-commercial fan character, Draconia Malfoid, loosely inspired by Draco Malfoy: a 21-year-old adult woman with the robe off, in a white long-sleeved shirt, a green-and-silver striped tie, a flat grey vest and a grey pleated skirt. Not affiliated with Warner Bros. or Wizarding World. A proud, sharp-tongued tsundere, secretly caring. The pictures were made with AI.",
+      "thumbnail": "thumbs/draconia-vest.webp",
+      "credit": "Draconia Malfoid (vest): an unofficial, non-commercial fan character, pictures made with AI (Grok Imagine).",
+      "aiMade": true,
+      "character": {
+        "id": "draconia",
+        "name": "Draconia Malfoid"
+      }
+    },
+    {
       "id": "franzi-bikini",
       "name": "Franzi (bikini)",
       "version": "1",
