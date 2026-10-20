@@ -2,6 +2,30 @@
   "format": 1,
   "packs": [
     {
+      "id": "draconia-gown",
+      "name": "Draconia Malfoid (Yule Ball gown)",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 5790208,
+        "framesBytes": 19606532
+      },
+      "hashes": {
+        "sha256": "88fb5231ce0822d14d7fd98d000885c30d5a0ba3fed1d37dda11637cb6ea8ccc"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/draconia-gown-v1/draconia-gown-v1.tar",
+      "description": "An unofficial, non-commercial fan character, Draconia Malfoid, loosely inspired by Draco Malfoy: a 21-year-old adult woman in an emerald-green off-the-shoulder Yule Ball gown with silver embroidery and a silver necklace. Not affiliated with Warner Bros. or Wizarding World. A proud, sharp-tongued tsundere, secretly caring. The pictures were made with AI.",
+      "thumbnail": "thumbs/draconia-gown.webp",
+      "credit": "Draconia Malfoid (Yule Ball gown): an unofficial, non-commercial fan character, pictures made with AI (Grok Imagine).",
+      "aiMade": true,
+      "character": {
+        "id": "draconia",
+        "name": "Draconia Malfoid"
+      }
+    },
+    {
       "id": "draconia-uniform",
       "name": "Draconia Malfoid (uniform)",
       "version": "1",
