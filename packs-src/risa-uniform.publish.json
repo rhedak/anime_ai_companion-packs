@@ -1,0 +1,11 @@
+{
+  "name": "Risa (school uniform)",
+  "description": "An original character, Risa, a 21-year-old adult woman, in her school uniform: a navy blazer with gold buttons, a white shirt with a light blue ribbon bow and a blue-grey pleated skirt, with long straight dark red hair with bangs, green eyes and a gold hair clip. The pictures were made with AI.",
+  "credit": "Risa (school uniform): an original character, pictures made with AI (Grok Imagine).",
+  "aiMade": true,
+  "thumbnail": "thumbs/risa-uniform.webp",
+  "character": {
+    "id": "risa",
+    "name": "Risa"
+  }
+}
