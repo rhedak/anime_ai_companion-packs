@@ -3,3 +3,4 @@ A 21-year-old adult woman with a small, slight build. Soft round face, shy and g
 default: risa-dress
 activity: swimming = bikini
 activity: cooking = uniform
+activity: dancing = dress
