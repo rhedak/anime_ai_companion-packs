@@ -74,11 +74,13 @@ The pack also has two 4-frame loops of her cooking, `activity-cooking-1` to `-4`
 1. **Pictures.** The key picture was made by editing the pack's `neutral` picture (on a plain white background) in xAI's
    Grok Imagine: the same outfit with a plain light-beige cooking apron over the vest and skirt, a black frying pan held
    at waist height with steam rising from it (in the hand on the left side of the picture) and a wooden spatula in the
-   other hand, her face calm with a faint smile. Two variants were edited from that key picture, with the hands pinned
-   to the same roles: the spatula resting at the pan's edge with the steam curling to the right, and a toss, the pan
-   tilted up, the spatula raised and a few pieces of chopped green and orange vegetables flying above the pan. A first
-   attempt at the second picture swapped which hand holds the pan and which the spatula, which would jump in the loop,
-   so it was discarded and asked for again. The loop order is key, rest, toss, rest; frames 2 and 4 are the same picture.
+   other hand, her face calm with a faint smile. The first pictures had an empty pan, so the food popped in at the toss. The
+   key picture was therefore edited again to put sautéing chopped green and orange vegetables in the pan, and the loop was
+   made from that picture: a variant with the hands pinned to the same roles, the spatula resting at the pan's edge and the steam
+   curling to the right, and a toss, the pan tilted up, the spatula raised and a few pieces of the vegetables flying above
+   the pan (made from the first, empty-pan key picture, which is why the pan holds fewer pieces there: most are in the air). A
+   first attempt at the resting picture swapped which hand holds the pan and which the spatula, which would jump in the
+   loop, so it was discarded and asked for again. The loop order is key, rest, toss, rest; frames 2 and 4 are the same picture.
 2. **Transparent background.** Each picture went through Grok Imagine's own *Remove Background* (a full-size RGBA PNG,
    which keeps her pale hair and the steam), and a script filled the deep interior of the figure (nothing transparent
    within 6 pixels) back to fully opaque, because the tool leaves dark cloth partly transparent. A scan for stray specks and
