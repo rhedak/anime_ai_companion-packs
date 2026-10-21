@@ -66,6 +66,34 @@ This is the same character as `draconia-uniform`, without the robe.
    WebP, with the same file names as those packs: 39 pictures, plus `NOTICE.md`, `credit.txt`, `look.txt` and this
    file.
 
+## Cooking activity frames
+
+The pack also has two 4-frame loops of her cooking, `activity-cooking-1` to `-4` (silent) and `activity-cooking-talk-1` to
+`-4` (talking, with the same poses), 940 × 1070 lossless WebP like the other frames, meant to play at about 3 frames a second.
+
+1. **Pictures.** The key picture was made by editing the pack's `neutral` picture (on a plain white background) in xAI's
+   Grok Imagine: the same outfit with a plain light-beige cooking apron over the vest and skirt, a black frying pan held
+   at waist height with steam rising from it (in the hand on the left side of the picture) and a wooden spatula in the
+   other hand, her face calm with a faint smile. The first pictures had an empty pan, so the food popped in at the toss. The
+   key picture was therefore edited again to put sautéing chopped green and orange vegetables in the pan, and the loop was
+   made from that picture: a variant with the hands pinned to the same roles, the spatula resting at the pan's edge and the steam
+   curling to the right, and a toss, the pan tilted up, the spatula raised and a few pieces of the vegetables flying above
+   the pan (made from the first, empty-pan key picture, which is why the pan holds fewer pieces there: most are in the air). A
+   first attempt at the resting picture swapped which hand holds the pan and which the spatula, which would jump in the
+   loop, so it was discarded and asked for again. The loop order is key, rest, toss, rest; frames 2 and 4 are the same picture.
+2. **Transparent background.** Each picture went through Grok Imagine's own *Remove Background* (a full-size RGBA PNG,
+   which keeps her pale hair and the steam), and a script filled the deep interior of the figure (nothing transparent
+   within 6 pixels) back to fully opaque, because the tool leaves dark cloth partly transparent. A scan for stray specks and
+   haze around the figure found none (at most 9 faint pixels).
+3. **Scale and position.** The pictures were scaled the same way as the rest of the pack (step 5 above) and shifted 2 px
+   left and 4 px down, which puts her eyes within 1 to 2 pixels of where they are in `neutral` (the distance between the
+   irises is 86 px in both, so her head is the same size).
+4. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in, drawn the way the pack's other
+   mouths were (step 3 above): the open mouth of the `cheer` pictures was cut out, the closed mouth in each cooking picture
+   was painted over with the skin around it, and the open mouth was pasted in at 24 × 15, 30 × 21, 24 × 15 and 18 × 10
+   pixels (frames 1 to 4, the same pattern as the dancing and swimming loops), turned to the tilt of her head. Every other
+   pixel is the same as in the silent frame. The app can play this loop while she speaks.
+
 ## Licence
 
 Not MIT. This pack is excluded from the repository's MIT licence and may not be used commercially; see `NOTICE.md`.
