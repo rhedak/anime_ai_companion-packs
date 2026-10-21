@@ -31,6 +31,29 @@ Like the rest of this repository and the `risa-dress`, `franzi-dress`, `franzi-c
 5. **Packaging.** All pictures were scaled to 940 × 1070 (the size of `risa-dress`) and saved as lossless WebP,
    with the same file names as `risa-dress`, `franzi-dress`, `franzi-casual` and `franzi-pajamas`: 39 pictures, plus `NOTICE.md`, `credit.txt` and this file.
 
+## Swimming activity frames
+
+The pack also has two 4-frame loops of her swimming, `activity-swimming-1` to `-4` (silent) and `activity-swimming-talk-1` to
+`-4` (talking, with the same poses), 940 × 1070 lossless WebP like the other frames, meant to play at about 3 frames a second.
+
+1. **Pictures.** Four edits of the pack's bikini `neutral` picture (on a plain white background) in xAI's Grok Imagine put
+   her waist-deep in calm water, in a soft rounded pool that fades into the white background, with ripples around her:
+   arms held a little out (the key picture), a freestyle stroke (one arm reaching forward just above the water, the other
+   swept back; her whole body leans a little, so her head sits lower and to one side in this frame), both hands skimming the
+   water with a small splash and droplets on one side, and arms swept back beside her hips. Two earlier attempts at the second
+   picture (a breaststroke start) came back with her hands clasped at her chest and with her arms crossed over it, neither
+   a stroke, so a freestyle pose was asked for instead. Her face is the base's own (her calm gentle smile) in all four.
+2. **Transparent background with water.** *Remove Background* treats the pool as background, so the water was taken from the
+   original picture instead: white was turned into transparency, which keeps the pool translucent and fading, and it was laid
+   under the figure from the tool's cutout. Dry skin and her white bikini stay opaque (a pale pixel only counts as water if it
+   is bluish, because her bikini bottom is pale and neutral, which a first attempt had taken for water and cut holes in). Pale
+   leftovers of the submerged body near the waterline were removed or softened.
+3. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in, 24 × 15, 30 × 21, 24 × 15 and
+   18 × 10 pixels (frames 1 to 4). The mouth is the open mouth of the pack's own `cheer-1` picture, cut out and scaled; her
+   closed mouth (a faint smile line in two pieces) was painted over with the skin around it first, and the open mouth was
+   turned to the tilt of her head in that picture (frame 2 leans, so its mouth does too). Every other pixel is the same as
+   in the silent frame. The app can play this loop while she speaks.
+
 ## Licence
 
 MIT, the same as the repository and the `risa-dress` pack. The pictures were made with AI, so whether and by whom
