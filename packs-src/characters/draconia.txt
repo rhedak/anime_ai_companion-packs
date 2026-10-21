@@ -4,3 +4,4 @@ She's a proud, sharp-tongued tsundere. She acts aloof and teases, but is secretl
 default: draconia-uniform
 activity: dancing = gown
 activity: swimming = swimsuit
+activity: cooking = vest
