@@ -34,6 +34,10 @@ Like the rest of this repository and the `risa-dress`, `risa-bikini`, `franzi-dr
    un-premultiplied, and the grey anti-aliased outlines of her outer hair strands are matted as semi-transparent hair, so
    no white or grey fringe shows on a dark background. Her white shirt, collar and cuffs, the light blue ribbon, the whites
    of her eyes and the highlights on her skin stay fully opaque. Blinks and mouths reuse their emotion picture's mask.
+   **Clean-up (version 2).** A check of the finished pictures found a few small white flecks of the old background left
+   in the gap between her left hair and her sleeve (and one or two beside the shoulder). A script cleared them in 29 of the
+   39 pictures (about 2,400 pixels in all, nothing else touched): small near-white blobs next to the outline and next to her
+   hair, and a box around that gap, where nothing white belongs. The pictures were saved again as lossless WebP.
 6. **Packaging.** All pictures were scaled to 940 × 1070 (the size of `risa-dress`) and saved as lossless WebP,
    with the same file names as `risa-bikini` and the other packs: 39 pictures, plus `NOTICE.md`, `credit.txt`, `look.txt` and this file.
 
