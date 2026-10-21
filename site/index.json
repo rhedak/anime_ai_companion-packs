@@ -196,18 +196,18 @@
     {
       "id": "risa-uniform",
       "name": "Risa (school uniform)",
-      "version": "1",
+      "version": "2",
       "frameCount": 39,
       "sizes": {
         "width": 940,
         "height": 1070,
-        "archiveBytes": 3578880,
-        "framesBytes": 12001044
+        "archiveBytes": 3612160,
+        "framesBytes": 12099958
       },
       "hashes": {
-        "sha256": "46a20f94ef72f9c34f3b21ee2e1a62acac606eb2a019489edf9a955f89ac215c"
+        "sha256": "3d1f4ff20d509241bf067b728f807fc048bb53dd21f330b0ca0d7217238bbce0"
       },
-      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/risa-uniform-v1/risa-uniform-v1.tar",
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/risa-uniform-v2/risa-uniform-v2.tar",
       "description": "An original character, Risa, a 21-year-old adult woman, in her school uniform: a navy blazer with gold buttons, a white shirt with a light blue ribbon bow and a blue-grey pleated skirt, with long straight dark red hair with bangs, green eyes and a gold hair clip. The pictures were made with AI.",
       "thumbnail": "thumbs/risa-uniform.webp",
       "credit": "Risa (school uniform): an original character, pictures made with AI (Grok Imagine).",
