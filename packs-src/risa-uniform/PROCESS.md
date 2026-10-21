@@ -41,6 +41,39 @@ Like the rest of this repository and the `risa-dress`, `risa-bikini`, `franzi-dr
 6. **Packaging.** All pictures were scaled to 940 × 1070 (the size of `risa-dress`) and saved as lossless WebP,
    with the same file names as `risa-bikini` and the other packs: 39 pictures, plus `NOTICE.md`, `credit.txt`, `look.txt` and this file.
 
+## Cooking activity frames (sample)
+
+The pack also has two 4-frame loops of her cooking, `activity-cooking-1` to `-4` (silent) and `activity-cooking-talk-1`
+to `-4` (talking, with the same poses), 940 × 1070 lossless WebP like the other frames. They are a sample: the app does not use `activity-*` frames yet.
+
+1. **Pictures.** The key picture was made by editing the pack's full-body uniform picture in Grok Imagine: Risa in her
+   uniform with a white apron, holding a black frying pan of vegetables at waist height and stirring with a wooden spatula,
+   with a calm smile, on the same white background at 1312 × 1504. Two pose variants were edited from it the same way: the
+   spatula pushed to the left of the pan with the steam curling left, and the spatula lifted with a few vegetable pieces
+   tossed in the air. A third variant (spatula on the right) was dropped, because the tool had swapped which hand holds the
+   spatula and the pan, which would jump in the loop. The loop order is key, left, toss, left; frames 2 and 4 are the same picture.
+2. **Scale and position.** The same framing as the rest of the pack (step 3): one common scale of 1.27 and a shift, the same
+   for all frames, measured by matching her head to `neutral`, then the same scaling to 940 × 1070. Her eyes land within
+   0.6 pixel of `neutral`'s; the pan and both hands are fully in the frame. The left-spatula picture came out stretched
+   about 0.4 % taller than the key, so it was squeezed back vertically to line up; the toss picture already lined up within 0.4 pixel.
+3. **One face.** The face came out slightly different in each picture, which flickered in the loop. The key picture's head
+   (face, bangs and clip, inside a feathered oval) was pasted onto the other pictures, so the face is identical in all frames;
+   the hair at the sides, the collar and the ribbon stay each picture's own.
+4. **Transparent background.** The white background was made transparent with the same method as the rest of the pack
+   (step 5). The apron is white on white, so its left neck strap, which runs beside her hair, is protected from the rule
+   that clears white strips between hair and blazer; the apron, shirt, collar and cuffs stay fully opaque. One extra rule
+   clears small white slivers between her outer hair strands right at the outline, which the other rules missed in two of
+   the pictures. The pan, the spatula and the tossed vegetable pieces stay part of the figure.
+5. **Steam.** The steam stays where it is drawn, over the pan and the apron, inside her outline and opaque; none of it
+   lies over the background, so nothing was made semi-transparent.
+6. **Cleanup.** A scan looked for stray specks away from her figure, faint haze around her outline and white flecks at the
+   edge. Per picture it cleared about 210 to 260 isolated faint specks (all nearly transparent), 105 to 195 haze pixels and
+   1 to 13 white-fleck pixels.
+7. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in. The mouths are the pack's own
+   script-drawn `neutral-talk2`, `neutral-talk3`, `neutral-talk2` and `neutral-talk1` mouths (frames 1 to 4), at the same
+   position as in `neutral`, with a feathered mask that covers the closed mouth fully and the skin tone matched; every other
+   pixel is the same as in the silent frame. The app can play this loop while she speaks.
+
 ## Licence
 
 MIT, the same as the repository and the `risa-dress` pack. The pictures were made with AI, so whether and by whom
