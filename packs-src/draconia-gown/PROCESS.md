@@ -64,6 +64,37 @@ This is the same character as `draconia-uniform` and `draconia-vest`, here in a 
    WebP, with the same file names as those packs: 39 pictures, plus `NOTICE.md`, `credit.txt`, `look.txt` and this
    file.
 
+## Dancing activity frames
+
+The pack also has two 4-frame loops of her dancing, `activity-dancing-1` to `-4` (silent) and `activity-dancing-talk-1`
+to `-4` (talking, with the same poses), 940 × 1070 lossless WebP like the other frames, meant to play at about 3 frames a second.
+
+1. **Pictures.** The key picture was made by editing the pack's gown base picture in Grok Imagine: Draconia dancing in
+   her gown, her left arm raised and the skirt swinging to one side, on the same hot-pink background at 1152 × 1728. Two
+   pose variants were edited from it the same way: centred with both arms out at shoulder height, and swaying to the other
+   side with the other arm raised. The loop order is key, centred, sway, centred; frames 2 and 4 are the same picture. No
+   picture was mirrored, so her side braid stays on its side in every frame.
+2. **Scale and position.** The tool drew her zoomed out, so one common scale and shift, the same for all frames, makes her
+   bigger and puts her head where it is in `neutral`: the point between her eyes in the key picture lands on `neutral`'s.
+   Matching her head size fully (scale 1.76) would have cut off her outstretched hands at the sides, so the scale is 1.57,
+   and her head is about 11 % smaller than in the pack's other pictures. Her hands stay inside the frame in every
+   picture (the closest, a fingertip in the centred pose, is 8 px from the edge). Then the same packaging as the rest of
+   the pack (step 5): scaled to 1070 px high and padded at the sides to 940 × 1070. The lower part of her skirt is cut
+   off at the bottom, and in the sway picture the skirt also reaches the left edge.
+3. **One face.** The face came out slightly different in each picture, which flickered in the loop. In the centred picture
+   her head is in the same place as in the key picture (within 1.5 pixels), so the key picture's head (face, bangs, braid
+   top and earring, inside a feathered oval) was pasted onto it. In the sway picture her head is turned and tilted and sits
+   further to one side, so that picture keeps its own face.
+4. **Transparent background.** The pink background was removed with the same chroma key as the rest of the pack (step 4),
+   the key colour sampled on each picture. A scan of the soft edge pixels found no pink left on her blonde hair, her skin
+   or the silver embroidery.
+5. **Cleanup.** A scan cleared 34 to 55 stray specks away from her figure per picture and faint haze around her outline.
+6. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in. The mouths are the pack's own
+   script-drawn `neutral-talk2`, `neutral-talk3`, `neutral-talk2` and `neutral-talk1` mouths (frames 1 to 4). They were made
+   11 % smaller to match her smaller head, turned to the slight tilt of her head and moved onto her closed mouth (fitted
+   separately on the sway picture's own face), with a feathered mask that covers the closed mouth fully and the skin tone
+   matched; every other pixel is the same as in the silent frame. The app can play this loop while she speaks.
+
 ## Licence
 
 Not MIT. This pack is excluded from the repository's MIT licence and may not be used commercially; see `NOTICE.md`.
