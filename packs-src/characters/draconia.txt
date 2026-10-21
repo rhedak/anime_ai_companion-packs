@@ -3,3 +3,4 @@ An unofficial, non-commercial fan character loosely inspired by Draco Malfoy, an
 She's a proud, sharp-tongued tsundere. She acts aloof and teases, but is secretly caring and gets flustered when someone is kind to her.
 default: draconia-uniform
 activity: dancing = gown
+activity: swimming = swimsuit
