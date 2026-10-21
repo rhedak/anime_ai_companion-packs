@@ -33,6 +33,9 @@ Each pack carries its own `NOTICE.md` and `credit.txt`, and those files are stor
    - Push a tag named `<pack-id>-v<version>`, for example `franzi-pajamas-v1`. The version is the pack's own version, `1` or `1.2.3`, the same form as the index field.
    - Or run **Actions → Publish pack → Run workflow** and enter the pack id and version. The workflow creates the tag `<pack-id>-v<version>` on the commit you ran it from when that tag does not exist yet.
 
+**Changing a published pack.** Publish it again under a higher version (`risa-uniform-v2` after `-v1`). The app remembers the version each pack was installed from and offers an
+update when the list's files differ, so a republish under the same number still works but shows no version change; raise it. Installed copies are only replaced when the user says yes.
+
 The workflow then:
 
 1. Checks out [anime_ai_companion](https://github.com/rhedak/anime_ai_companion) at `COMPANION_REF` in `.github/workflows/publish.yml` and runs `npm ci`.
