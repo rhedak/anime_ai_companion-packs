@@ -33,7 +33,7 @@ concurrency:
 
 env:
   COMPANION_REPO: rhedak/anime_ai_companion
-  COMPANION_REF: a86a3d61dff1bf74e5982a85bb344638831a76de
+  COMPANION_REF: 166a547ad9b3aa11c33816eb4d40bd9c9310264a
 
 jobs:
   publish:
