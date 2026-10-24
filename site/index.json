@@ -218,6 +218,30 @@
       }
     },
     {
+      "id": "risa-casual",
+      "name": "Risa (casual)",
+      "version": "1",
+      "frameCount": 112,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 13132800,
+        "framesBytes": 20279260
+      },
+      "hashes": {
+        "sha256": "247db41ade81980344d6d910d34ca03c1e022ac607a3848fe697f69af5f5ffba"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/risa-casual-v1/risa-casual-v1.tar",
+      "description": "An original character, Risa, a 21-year-old adult woman, in a casual outfit: a light blue T-shirt and a dark charcoal pleated skirt, with long straight dark red hair with bangs, green eyes and a gold hair clip, with a reading activity. The pictures were made with AI.",
+      "thumbnail": "thumbs/risa-casual.webp",
+      "credit": "Risa (casual): an original character, pictures made with AI (FLUX.2 klein 4B on a local computer, and Grok Imagine for the reading loop).",
+      "aiMade": true,
+      "character": {
+        "id": "risa",
+        "name": "Risa"
+      }
+    },
+    {
       "id": "risa-uniform",
       "name": "Risa (school uniform)",
       "version": "3",
