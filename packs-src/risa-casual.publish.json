@@ -1,0 +1,11 @@
+{
+  "name": "Risa (casual)",
+  "description": "An original character, Risa, a 21-year-old adult woman, in a casual outfit: a light blue T-shirt and a dark charcoal pleated skirt, with long straight dark red hair with bangs, green eyes and a gold hair clip, with a reading activity. The pictures were made with AI.",
+  "credit": "Risa (casual): an original character, pictures made with AI (FLUX.2 klein 4B on a local computer, and Grok Imagine for the reading loop).",
+  "aiMade": true,
+  "thumbnail": "thumbs/risa-casual.webp",
+  "character": {
+    "id": "risa",
+    "name": "Risa"
+  }
+}
