@@ -1,0 +1,2 @@
+Risa (casual): an original character, pictures made with AI (FLUX.2 klein 4B on a local computer, and Grok Imagine for the reading loop).
+Made with AI. See packs/risa-casual/NOTICE.md for the terms.
