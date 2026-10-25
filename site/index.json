@@ -28,18 +28,18 @@
     {
       "id": "draconia-swimsuit",
       "name": "Draconia Malfoid (swimsuit)",
-      "version": "1",
-      "frameCount": 47,
+      "version": "2",
+      "frameCount": 115,
       "sizes": {
         "width": 940,
         "height": 1070,
-        "archiveBytes": 6474240,
-        "framesBytes": 18122004
+        "archiveBytes": 21444096,
+        "framesBytes": 30366284
       },
       "hashes": {
-        "sha256": "16969caae3945c0450956464634e9b4eb44f91598006b81f3c4cac1277a1f264"
+        "sha256": "55215b398c7f9bb3a758a791affd230562a87220b416ea9f11fb90a62376de9a"
       },
-      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/draconia-swimsuit-v1/draconia-swimsuit-v1.tar",
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/draconia-swimsuit-v2/draconia-swimsuit-v2.tar",
       "description": "An unofficial, non-commercial fan character, Draconia Malfoid, loosely inspired by Draco Malfoy: a 21-year-old adult woman in an elegant dark emerald one-piece swimsuit with silver scrollwork edging, with a swimming activity. Not affiliated with Warner Bros. or Wizarding World. A proud tsundere, secretly caring. Pictures made with AI.",
       "thumbnail": "thumbs/draconia-swimsuit.webp",
       "credit": "Draconia Malfoid (swimsuit): an unofficial, non-commercial fan character, pictures made with AI (Grok Imagine).",
