@@ -242,6 +242,30 @@
       }
     },
     {
+      "id": "risa-green-coat",
+      "name": "Risa (green coat)",
+      "version": "1",
+      "frameCount": 39,
+      "sizes": {
+        "width": 940,
+        "height": 1070,
+        "archiveBytes": 4804096,
+        "framesBytes": 14634596
+      },
+      "hashes": {
+        "sha256": "99d28ff42b41b91cfb10fcbf40a73f24ca75f129f333a005bcec2495982d1d1f"
+      },
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/risa-green-coat-v1/risa-green-coat-v1.tar",
+      "description": "An original character, Risa, a 21-year-old adult woman, in a winter outfit: a dark green hooded coat over a white knitted sweater and a grey wool skirt, with long straight dark red hair with bangs, green eyes and a gold hair clip. The pictures were made with AI.",
+      "thumbnail": "thumbs/risa-green-coat.webp",
+      "credit": "Risa (green coat): an original character, pictures made with AI (Grok Imagine).",
+      "aiMade": true,
+      "character": {
+        "id": "risa",
+        "name": "Risa"
+      }
+    },
+    {
       "id": "risa-uniform",
       "name": "Risa (school uniform)",
       "version": "3",
