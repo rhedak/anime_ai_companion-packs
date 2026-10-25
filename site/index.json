@@ -76,18 +76,18 @@
     {
       "id": "draconia-vest",
       "name": "Draconia Malfoid (vest)",
-      "version": "2",
-      "frameCount": 47,
+      "version": "3",
+      "frameCount": 105,
       "sizes": {
         "width": 940,
         "height": 1070,
-        "archiveBytes": 5378560,
-        "framesBytes": 15928224
+        "archiveBytes": 11261440,
+        "framesBytes": 20351450
       },
       "hashes": {
-        "sha256": "bb3251c4c1098d05f7568464519bdca8e2a71bebe6694bd41775315585a5a9a1"
+        "sha256": "f11cd6cf512e6f0356261cde3f6cd3b8c1706e826844aada838ac048d8f658f7"
       },
-      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/draconia-vest-v2/draconia-vest-v2.tar",
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/draconia-vest-v3/draconia-vest-v3.tar",
       "description": "An unofficial, non-commercial fan character, Draconia Malfoid, loosely inspired by Draco Malfoy: a 21-year-old adult woman with the robe off, in a white long-sleeved shirt, a green-and-silver striped tie, a flat grey vest and a grey pleated skirt. Not affiliated with Warner Bros. or Wizarding World. A proud, sharp-tongued tsundere, secretly caring. The pictures were made with AI.",
       "thumbnail": "thumbs/draconia-vest.webp",
       "credit": "Draconia Malfoid (vest): an unofficial, non-commercial fan character, pictures made with AI (Grok Imagine).",
