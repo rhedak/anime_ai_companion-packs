@@ -196,18 +196,18 @@
     {
       "id": "risa-bikini",
       "name": "Risa (bikini)",
-      "version": "2",
-      "frameCount": 47,
+      "version": "3",
+      "frameCount": 111,
       "sizes": {
         "width": 940,
         "height": 1070,
-        "archiveBytes": 5730816,
-        "framesBytes": 16826812
+        "archiveBytes": 20123648,
+        "framesBytes": 29359476
       },
       "hashes": {
-        "sha256": "03acf5f59cb22244b9360d400a09ef22d98f5af403315a7649c9165e218c27c2"
+        "sha256": "d4e72196766da04c06a0f01a8531fed85337a84b16e95ee9507827a4364f8761"
       },
-      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/risa-bikini-v2/risa-bikini-v2.tar",
+      "url": "https://github.com/rhedak/anime_ai_companion-packs/releases/download/risa-bikini-v3/risa-bikini-v3.tar",
       "description": "An original character, Risa, in a white halter bikini, with long straight dark red hair with bangs, green eyes and a gold hair clip. The pictures were made with AI.",
       "thumbnail": "thumbs/risa-bikini.webp",
       "credit": "Risa (bikini): an original character, pictures made with AI (Grok Imagine).",
