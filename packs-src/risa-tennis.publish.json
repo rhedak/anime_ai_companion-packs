@@ -1,0 +1,11 @@
+{
+  "name": "Risa (tennis)",
+  "description": "An original character, Risa, a 21-year-old adult woman, in a tennis outfit: a white short-sleeved polo with navy trim and a short white pleated skirt, with long straight dark red hair with bangs, green eyes and a gold hair clip, with a tennis activity. The pictures were made with AI.",
+  "credit": "Risa (tennis): an original character, pictures made with AI (ChatGPT for the neutral picture, Grok Imagine for the rest and for the tennis loop).",
+  "aiMade": true,
+  "thumbnail": "thumbs/risa-tennis.webp",
+  "character": {
+    "id": "risa",
+    "name": "Risa"
+  }
+}
