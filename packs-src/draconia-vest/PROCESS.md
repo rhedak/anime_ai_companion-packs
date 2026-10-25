@@ -66,33 +66,23 @@ This is the same character as `draconia-uniform`, without the robe.
    WebP, with the same file names as those packs: 39 pictures, plus `NOTICE.md`, `credit.txt`, `look.txt` and this
    file.
 
-## Cooking activity frames
+## The cooking activity (66 pictures: a fried-rice loop and its talking set)
 
-The pack also has two 4-frame loops of her cooking, `activity-cooking-1` to `-4` (silent) and `activity-cooking-talk-1` to
-`-4` (talking, with the same poses), 940 × 1070 lossless WebP like the other frames, meant to play at about 3 frames a second.
+Replaces the earlier four-picture sample loop. Made on 25 October 2026 on Grok Imagine in the owner's signed-in Chrome, with the owner's Grok allowance (nothing was paid per picture). The same method as the `risa-bikini` loop (see its `PROCESS.md`), for a prop activity. She cooks fried rice in a wok instead of the pancake of the earlier sample.
 
-1. **Pictures.** The key picture was made by editing the pack's `neutral` picture (on a plain white background) in xAI's
-   Grok Imagine: the same outfit with a plain light-beige cooking apron over the vest and skirt, a black frying pan held
-   at waist height with steam rising from it (in the hand on the left side of the picture) and a wooden spatula in the
-   other hand, her face calm with a faint smile. The first pictures had an empty pan, so the food popped in at the toss. The
-   key picture was therefore edited again to put sautéing chopped green and orange vegetables in the pan, and the loop was
-   made from that picture: a variant with the hands pinned to the same roles, the spatula resting at the pan's edge and the steam
-   curling to the right, and a toss, the pan tilted up, the spatula raised and a few pieces of the vegetables flying above
-   the pan (made from the first, empty-pan key picture, which is why the pan holds fewer pieces there: most are in the air). A
-   first attempt at the resting picture swapped which hand holds the pan and which the spatula, which would jump in the
-   loop, so it was discarded and asked for again. The loop order is key, rest, toss, rest; frames 2 and 4 are the same picture.
-2. **Transparent background.** Each picture went through Grok Imagine's own *Remove Background* (a full-size RGBA PNG,
-   which keeps her pale hair and the steam), and a script filled the deep interior of the figure (nothing transparent
-   within 6 pixels) back to fully opaque, because the tool leaves dark cloth partly transparent. A scan for stray specks and
-   haze around the figure found none (at most 9 faint pixels).
-3. **Scale and position.** The pictures were scaled the same way as the rest of the pack (step 5 above) and shifted 2 px
-   left and 4 px down, which puts her eyes within 1 to 2 pixels of where they are in `neutral` (the distance between the
-   irises is 86 px in both, so her head is the same size).
-4. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in, drawn the way the pack's other
-   mouths were (step 3 above): the open mouth of the `cheer` pictures was cut out, the closed mouth in each cooking picture
-   was painted over with the skin around it, and the open mouth was pasted in at 24 × 15, 30 × 21, 24 × 15 and 18 × 10
-   pixels (frames 1 to 4, the same pattern as the dancing and swimming loops), turned to the tilt of her head. Every other
-   pixel is the same as in the silent frame. The app can play this loop while she speaks.
+1. **Key picture.** The pack's `neutral` picture was put on flat magenta and edited on Grok Imagine into a picture of her holding a black wok in her right hand, stretched forward and a little down, pointing away from her toward the viewer, with fried rice in it (golden rice with egg, carrot and peas),
+   and a wooden spatula low in her other hand. A first try with a frying pan and a pancake was not used: the owner asked for fried rice instead. The owner approved the key picture before the video was made. Her hair came out a little darker than in `neutral`.
+2. **Video.** One video (720p, 6 seconds, 896 x 1024, 24 a second): she tosses the rice up out of the wok and catches it, twice, with a long rest in between. The tosses are about 96 frames apart; the pair of frames 97 apart that differ least (frames 40 and 137 of the 145;
+   a difference of 0.5 of a 12-a-second step) closes the loop. To keep the pack under the 120-file limit with a talking set, every third frame of that stretch was taken (33 pictures at 12 a second), so the loop plays one and a half times faster than the video.
+3. **Cutting out.** Each frame was cut out of the magenta with the studio's matting (key magenta, with the cleaning of pink leftovers), scaled to 940 x 1070 and saved as lossy WebP (quality 90, lossless transparency).
+4. **Position.** One common shift (4 pixels left, 2 down) puts her head where it is in `neutral`; her own movement is kept.
+5. **Talking set.** `activity-cooking-talk-N`: her closed mouth erased and an open mouth from her `cheer-1` pasted in, three sizes in the order 2, 2, 3, 3, 2, 2, 1, 1, 3, 3, 2, 2 and so on. In two pictures (25 and 26) flying rice covers her mouth, so the talking picture is the silent one.
+
+### Faults that are left
+
+- Looked at as contact sheets, every talking face at small size and the loop as a GIF, not every picture at full size. The loop starts and ends at rest with the wok held out; the toss happens once per loop and is faster than in the video.
+- Her hair is a little darker than in her other pictures, and her head and the wok move a little. The pictures are soft, as the video is only 896 x 1024.
+- The earlier four-picture loop is kept in the owner's `ref/` folder.
 
 ## Licence
 

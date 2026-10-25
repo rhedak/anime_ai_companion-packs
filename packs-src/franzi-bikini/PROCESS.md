@@ -31,28 +31,23 @@ Like the rest of this repository and the `risa-dress`, `franzi-dress`, `franzi-c
 5. **Packaging.** All pictures were scaled to 940 × 1070 (the size of `risa-dress`) and saved as lossless WebP,
    with the same file names as `risa-dress`, `franzi-dress`, `franzi-casual` and `franzi-pajamas`: 39 pictures, plus `NOTICE.md`, `credit.txt` and this file.
 
-## Swimming activity frames
+## The swimming activity (72 pictures: a splashing loop and its talking set)
 
-The pack also has two 4-frame loops of her swimming, `activity-swimming-1` to `-4` (silent) and `activity-swimming-talk-1` to
-`-4` (talking, with the same poses), 940 × 1070 lossless WebP like the other frames, meant to play at about 3 frames a second.
+Replaces the earlier four-picture sample loop. Made on 25 October 2026 on Grok Imagine in the owner's signed-in Chrome, with the owner's Grok allowance (nothing was paid per picture). The same method as the `risa-bikini` loop (see its `PROCESS.md`).
 
-1. **Pictures.** Four edits of the pack's bikini `neutral` picture (on a plain white background) in xAI's Grok Imagine put
-   her waist-deep in calm water, in a soft rounded pool that fades into the white background, with ripples around her:
-   arms held a little out (the key picture), a freestyle stroke (one arm reaching forward just above the water, the other
-   swept back; her whole body leans a little, so her head sits lower and to one side in this frame), both hands skimming the
-   water with a small splash and droplets on one side, and arms swept back beside her hips. Two earlier attempts at the second
-   picture (a breaststroke start) came back with her hands clasped at her chest and with her arms crossed over it, neither
-   a stroke, so a freestyle pose was asked for instead. Her face is the base's own (her calm gentle smile) in all four.
-2. **Transparent background with water.** *Remove Background* treats the pool as background, so the water was taken from the
-   original picture instead: white was turned into transparency, which keeps the pool translucent and fading, and it was laid
-   under the figure from the tool's cutout. Dry skin and her white bikini stay opaque (a pale pixel only counts as water if it
-   is bluish, because her bikini bottom is pale and neutral, which a first attempt had taken for water and cut holes in). Pale
-   leftovers of the submerged body near the waterline were removed or softened.
-3. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in, 24 × 15, 30 × 21, 24 × 15 and
-   18 × 10 pixels (frames 1 to 4). The mouth is the open mouth of the pack's own `cheer-1` picture, cut out and scaled; her
-   closed mouth (a faint smile line in two pieces) was painted over with the skin around it first, and the open mouth was
-   turned to the tilt of her head in that picture (frame 2 leans, so its mouth does too). Every other pixel is the same as
-   in the silent frame. The app can play this loop while she speaks.
+1. **Key picture.** The pack's `neutral` picture was put on flat magenta and edited on Grok Imagine into a picture of her standing waist-deep in calm light-blue water, in a soft rounded pool that fades out into the magenta, with ripples, her hands low and her mouth closed (one try).
+2. **Video.** One video (720p, 6 seconds, 896 x 1024, 24 a second): she scoops water in both hands, splashes it up and out and settles back, and then the pool stays at rest for the second half. The pair of frames that closes the loop best
+   (frames 5 and 113 of the 145, 108 apart; a difference of 0.9 of a 12-a-second step) is a little looser than in Risa's. To keep the pack under the 120-file limit with a talking set, every third frame was taken (36 pictures at 12 a second), so the loop plays one and a half times faster than the video.
+3. **Cutting out the water.** Each frame was cut out of the magenta with the studio's matting, and the water was un-mixed from the key (see the `make-activity-pack` skill, "Water on a key"), which keeps the pool's soft blue edge and the see-through droplets and ribbons. Scaled to 940 x 1070, lossy WebP (quality 90, lossless transparency).
+4. **Position.** One common shift (2 pixels left, 3 down) puts her head where it is in `neutral`; her own head movement in the loop is kept.
+5. **Talking set.** `activity-swimming-talk-N`: her closed mouth erased and an open mouth from her `cheer-1` pasted in, three sizes in the order 2, 2, 3, 3, 2, 2, 1, 1, 3, 3, 2, 2 and so on, at the place the closed mouth had (moved with the head's own movement).
+
+### Faults that are left
+
+- Looked at as contact sheets, the faces at 3 times zoom for 12 pictures, and the loop as a GIF, not every picture. The loop point is a little visible in the ripples of the pool.
+- The splash arcs up and out, not at the viewer, and the water ribbons pass in front of her body, see-through. The loop is one and a half times faster than the video.
+- The pictures are heavy for a lossy loop (about 160 KB each) because of the water; the pictures are soft, as the video is only 896 x 1024.
+- The earlier four-picture loop is kept in the owner's `ref/` folder.
 
 ## Licence
 

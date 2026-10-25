@@ -46,24 +46,23 @@ swimming activity.
 6. **Packaging.** All pictures were scaled to 940 × 1070 (the size of the other packs) with premultiplied alpha and
    saved as lossless WebP, with the same file names as those packs.
 
-## Swimming activity frames
+## The swimming activity (76 pictures: a splashing loop and its talking set)
 
-The pack has two 4-frame loops, `activity-swimming-1` to `-4` (silent) and `activity-swimming-talk-1` to `-4` (talking,
-the same poses with her mouth open), 940 × 1070 lossless WebP, meant to play at about 3 frames a second.
+Replaces the earlier four-picture sample loop. Made on 25 October 2026 on Grok Imagine in the owner's signed-in Chrome, with the owner's Grok allowance (nothing was paid per picture). The same method as the `risa-bikini` loop (see its `PROCESS.md`).
 
-1. **Pictures.** Four edits of the base picture in Grok Imagine put her waist-deep in calm water, in a soft rounded
-   pool that fades into the white background, with ripples around her: arms held a little out (the key picture), a
-   forearm stroke across her body, both hands skimming the water with a small splash, and arms back beside her hips.
-   Her face is the base's own (her calm neutral expression) in all four.
-2. **Transparent background with water.** *Remove Background* treats the pool as background, so the water was taken from
-   the original picture instead: white was converted to transparency, which keeps the pool translucent and fading, and
-   it was laid under the figure from the tool's cutout. Dry skin and the dark suit stay opaque, while pale, bluish-white
-   pixels near the waterline (the tool's leftover band where she meets the water, and in frame 2 her submerged body kept as
-   a pale column) go to the water layer; the water near the hips of frame 2 was softened. The waterline is where each arm and
-   hip enters the water.
-3. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in (the same mouth method as in
-   step 5 above), 24 × 15, 30 × 21, 24 × 15 and 18 × 10 pixels (frames 1 to 4), with every other pixel the same as in
-   the silent frame. The app can play this loop while she speaks.
+1. **Key picture.** The pack's `neutral` picture was put on flat magenta and edited on Grok Imagine into a picture of her standing waist-deep in calm light-blue water, in a soft rounded pool that fades out into the magenta, with ripples, her hands low and her mouth closed (one try).
+2. **Video.** The first video (720p, 6 seconds) had her close her eyes in a smile for the whole time, so it was thrown away; the second asked for her eyes to stay open, and they did. It is two splash cycles of about 76 frames (24 a second): she scoops water in both hands,
+   splashes it up and out in a wide arc and settles back. The pair of frames 76 apart that differ least (frames 69 and 145 of the 145; a difference of 0.5 of a 12-a-second step) closes the loop. Every second frame of that stretch is a picture: 38 pictures at 12 a second.
+3. **Cutting out the water.** Each frame was cut out of the magenta with the studio's matting, and the water was un-mixed from the key (see the `make-activity-pack` skill, "Water on a key"), which keeps the pool's soft blue edge and the see-through droplets and ribbons. Scaled to 940 x 1070, lossy WebP (quality 90, lossless transparency).
+4. **Position.** One common shift (5 pixels down) puts her head where it is in `neutral`; her own head movement in the loop is kept.
+5. **Talking set.** `activity-swimming-talk-N`: her closed mouth erased and an open mouth from her `cheer-1` pasted in, three sizes in the order 2, 2, 3, 3, 2, 2, 1, 1, 3, 3, 2, 2 and so on, at the place the closed mouth had (moved with the head's own movement).
+
+### Faults that are left
+
+- Looked at as contact sheets, the faces at 3 times zoom for 12 pictures, and the loop as a GIF, not every picture.
+- The splash arcs up and out and the water ribbons pass in front of her body, see-through; the loop starts in the middle of a splash. The pool's rim has a faint lavender in places where the video painted a violet glow.
+- The pictures are heavy for a lossy loop because of the water; the pictures are soft, as the video is only 896 x 1024.
+- The earlier four-picture loop is kept in the owner's `ref/` folder.
 
 ## Licence
 
