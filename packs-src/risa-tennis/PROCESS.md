@@ -24,11 +24,12 @@ Nothing was paid per picture; it used the owner's ChatGPT (free) and Grok Imagin
 2. **Video.** Two videos were made from it (720p, 6 seconds). The first ended with both hands on the racket, which did not match its start. The second prompt said that the video ends exactly the way it starts, and its last frame
    matched its first closely (the difference between the two was a little under one frame step), so that one was used.
 3. **Frames.** ffmpeg took every second picture of the stretch from the second frame to the 140th (12 a second, 70 pictures, the last leads back to the first), each was cut out of the magenta with the studio's matting, the racket's strings are see-through,
+   a small cleaning step took out the pale pink smudge the video draws where the ball is about to appear (a small separate piece of pink, not the ball) and gave the pink-tinted pixels of the racket's strings the green they lacked, so they are white or grey,
    scaled to 940 x 1070 and saved as lossy WebP (quality 90, lossless transparency), as the app allows for long loops. The lossless versions are kept outside this repository.
 
 ## Faults that are left
 
-- It was looked at as contact sheets and in the app, not frame by frame. In a few frames the racket's strings keep a faint pink tint from the background.
+- It was looked at as contact sheets and in the app, not frame by frame. No frame has more than about 130 clearly pink pixels left (before the cleaning, 8 000 in most frames), mostly at the hair's edge.
 - The ball passes in front of her body on its way toward the viewer, and she is not looking at it; the swing is a forehand with the racket going out of the picture on her side.
 - Her hair moves a lot during the swing, and the framing drifts a little.
 - The loop is soft, as the video is only 896 x 1024.
