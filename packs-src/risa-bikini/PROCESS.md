@@ -34,35 +34,28 @@ Like the rest of this repository and the `risa-dress`, `franzi-dress`, `franzi-c
 5. **Packaging.** All pictures were scaled to 940 × 1070 (the size of `risa-dress`) and saved as lossless WebP,
    with the same file names as `risa-dress`, `franzi-dress`, `franzi-casual`, `franzi-pajamas` and `franzi-bikini`: 39 pictures, plus `NOTICE.md`, `credit.txt`, `look.txt` and this file.
 
-## Swimming activity frames (sample)
+## The swimming activity (72 pictures: a splashing loop and its talking set)
 
-The pack also has two 4-frame loops of her swimming, `activity-swimming-1` to `-4` (silent) and `activity-swimming-talk-1`
-to `-4` (talking, with the same arm poses), 940 × 1070 lossless WebP like the other frames. They are a sample: the app does not use `activity-*` frames yet.
+Replaces the earlier four-picture sample loop. Made on 25 October 2026 on Grok Imagine in the owner's signed-in Chrome, with the owner's Grok allowance (nothing was paid per picture).
 
-1. **Pictures.** The key picture was made by editing the pack's bikini base picture in Grok Imagine: Risa chest-deep in
-   calm light-blue water, treading water with her arms out to the sides and a calm smile, on the same black background at
-   1312 × 1504. Three pose variants were edited from it the same way: arms swept forward and together, arms swept back
-   (her body a little higher), and arms as in the key with the ripples spreading and small splashes near her hands. The loop
-   order is key, forward, splashes, back.
-2. **Scale and position.** The tool drew her smaller and lower than in the pack's other pictures. One common scale and
-   shift, the same for all four frames, makes her head the size and position of the `neutral` frame: scale 1.115 at
-   1312 × 1504, measured by matching her head to `neutral`, then the same scaling to 940 × 1070 as the rest of the pack.
-   Matching the head regions showed the frames already lined up within 0.3 pixel, so no frame was moved further.
-   Her eyes are drawn slightly further apart than in `neutral`; the head outline, chin and clip match.
-3. **One face.** The face came out slightly different in each picture, which flickered in the loop. The key picture's head
-   (face, bangs and clip, inside a feathered oval) was pasted onto the other three, so the face is identical in all frames;
-   the hair at the sides stays each picture's own.
-4. **Transparent background.** The black above the water was made transparent with the same method as the rest of the
-   pack (step 4), in the version that also clears the JPEG's lifted black and the red-tinted black beside her hair. Below the
-   waterline there is no black, so the pictures were kept as they are there. The water is kept only around her: its alpha fades
-   smoothly to nothing at the sides, a little beyond her hands, and towards the bottom, so a pool of water with the ripples is
-   left around her and every edge of the frame is transparent.
-5. **Cleanup.** A scan looked for stray specks away from her figure, faint haze around her outline and white flecks at the
-   edge. It found two single faint pixels and one haze pixel, which were cleared.
-6. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in. The mouths are the pack's own
-   script-drawn `neutral-talk2`, `neutral-talk3`, `neutral-talk2` and `neutral-talk1` mouths (frames 1 to 4), at the same
-   position as in `neutral`, with a feathered mask that covers the closed mouth fully and the skin tone matched; every other
-   pixel is the same as in the silent frame. The app can play this loop while she speaks.
+1. **Key picture.** The pack's `neutral` picture was put on flat magenta and edited on Grok Imagine into a picture of her standing waist-deep in calm light-blue water, in a soft rounded pool that fades out at its edges into the magenta, with ripples, her hands low and her mouth closed.
+   Two other key pictures were made and thrown away: one with a crisply outlined pool (Grok drew a sticker-like outline around her whole figure) and one on flat green (the pool's fade turned bright green).
+2. **Video.** One video was made from it (720p, 6 seconds, 896 x 1024, 24 a second): she scoops water in both hands, splashes it up and out in big arcs and settles back. It is two nearly identical 3-second cycles. The pair of frames 72 apart that differ least
+   (frames 56 and 128 of the 145; a difference of 0.3 of a 12-a-second step) closes the loop. Every second frame of that stretch is a picture: 36 pictures at 12 a second.
+3. **Cutting out the water.** Each frame was cut out of the magenta with the studio's matting (`cutout.ts`, magenta key). Water in front of a key is a mix of the two, which that matting reads as a figure with a violet tint, so a second step solved, for every partly see-through pixel
+   that lies between the key colour and a water colour (a mid light blue, or a pale glassy white-blue), how much of it is water, and gave it that opacity and the water's own colour. That gives the pool a soft blue edge and keeps the droplets and ribbons of the splash see-through.
+   Faint noise of the video on the key (opacity below 14 %) and specks under 25 pixels were removed. Scaled to 940 x 1070 with premultiplied alpha, saved as lossy WebP (quality 90, lossless transparency), as the app allows for long loops. The lossless versions are kept outside this repository.
+4. **Position.** All 36 pictures were moved by one common shift (1 pixel left, 3 down) so that her head sits where it does in `neutral`; her own head movement in the loop is kept.
+5. **Talking set.** `activity-swimming-talk-N` is the picture with the same number with her closed mouth erased and an open mouth pasted in, from the `cheer-1` picture's mouth, in three sizes in the order 2, 2, 3, 3, 2, 2, 1, 1, 3, 3, 2, 2 and so on, at the position the closed mouth had. The eye finder cannot find
+   Risa's pale iris in the video's small head reliably, so the mouth position comes from the `neutral` picture's eyes, moved with the head movement measured for each frame.
+
+### Faults that are left
+
+- It was looked at as contact sheets, the faces at 3 times zoom for 11 pictures and the loop as a GIF, not every picture. The pool's far rim has a faint lavender where Grok painted a violet glow; the ripples near the start and end of the loop spread to the edges of the picture and are faint.
+- The splash arcs up and out and not straight at the viewer, and the water ribbons pass in front of her body, see-through.
+- The pictures are heavy for a lossy loop (about 220 KB each) because of the detail of the water.
+- Her head moves a few pixels during the loop, and the pictures are soft, as the video is only 896 x 1024.
+- The earlier four-picture loop is kept in the owner's `ref/` folder.
 
 ## Licence
 

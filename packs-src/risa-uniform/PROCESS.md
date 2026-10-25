@@ -41,38 +41,24 @@ Like the rest of this repository and the `risa-dress`, `risa-bikini`, `franzi-dr
 6. **Packaging.** All pictures were scaled to 940 × 1070 (the size of `risa-dress`) and saved as lossless WebP,
    with the same file names as `risa-bikini` and the other packs: 39 pictures, plus `NOTICE.md`, `credit.txt`, `look.txt` and this file.
 
-## Cooking activity frames (sample)
+## The cooking activity (72 pictures: a pancake-tossing loop and its talking set)
 
-The pack also has two 4-frame loops of her cooking, `activity-cooking-1` to `-4` (silent) and `activity-cooking-talk-1`
-to `-4` (talking, with the same poses), 940 × 1070 lossless WebP like the other frames. They are a sample: the app does not use `activity-*` frames yet.
+Replaces the earlier four-picture sample loop. Made on 25 October 2026 on Grok Imagine in the owner's signed-in Chrome, with the owner's Grok allowance (nothing was paid per picture). The same method as the `risa-bikini` loop (see its `PROCESS.md`), for a prop activity.
 
-1. **Pictures.** The key picture was made by editing the pack's full-body uniform picture in Grok Imagine: Risa in her
-   uniform with a white apron, holding a black frying pan of vegetables at waist height and stirring with a wooden spatula,
-   with a calm smile, on the same white background at 1312 × 1504. Two pose variants were edited from it the same way: the
-   spatula pushed to the left of the pan with the steam curling left, and the spatula lifted with a few vegetable pieces
-   tossed in the air. A third variant (spatula on the right) was dropped, because the tool had swapped which hand holds the
-   spatula and the pan, which would jump in the loop. The loop order is key, left, toss, left; frames 2 and 4 are the same picture.
-2. **Scale and position.** The same framing as the rest of the pack (step 3): one common scale of 1.27 and a shift, the same
-   for all frames, measured by matching her head to `neutral`, then the same scaling to 940 × 1070. Her eyes land within
-   0.6 pixel of `neutral`'s; the pan and both hands are fully in the frame. The left-spatula picture came out stretched
-   about 0.4 % taller than the key, so it was squeezed back vertically to line up; the toss picture already lined up within 0.4 pixel.
-3. **One face.** The face came out slightly different in each picture, which flickered in the loop. The key picture's head
-   (face, bangs and clip, inside a feathered oval) was pasted onto the other pictures, so the face is identical in all frames;
-   the hair at the sides, the collar and the ribbon stay each picture's own.
-4. **Transparent background.** The white background was made transparent with the same method as the rest of the pack
-   (step 5). The apron is white on white, so its left neck strap, which runs beside her hair, is protected from the rule
-   that clears white strips between hair and blazer; the apron, shirt, collar and cuffs stay fully opaque. One extra rule
-   clears small white slivers between her outer hair strands right at the outline, which the other rules missed in two of
-   the pictures. The pan, the spatula and the tossed vegetable pieces stay part of the figure.
-5. **Steam.** The steam stays where it is drawn, over the pan and the apron, inside her outline and opaque; none of it
-   lies over the background, so nothing was made semi-transparent.
-6. **Cleanup.** A scan looked for stray specks away from her figure, faint haze around her outline and white flecks at the
-   edge. Per picture it cleared about 210 to 260 isolated faint specks (all nearly transparent), 105 to 195 haze pixels and
-   1 to 13 white-fleck pixels.
-7. **Talking loop.** The talking frames are the four silent frames with an open mouth cut in. The mouths are the pack's own
-   script-drawn `neutral-talk2`, `neutral-talk3`, `neutral-talk2` and `neutral-talk1` mouths (frames 1 to 4), at the same
-   position as in `neutral`, with a feathered mask that covers the closed mouth fully and the skin tone matched; every other
-   pixel is the same as in the silent frame. The app can play this loop while she speaks.
+1. **Key picture.** The pack's `neutral` picture was put on flat magenta and edited on Grok Imagine into a picture of her holding a black frying pan with one pancake in her right hand and a wooden spatula in her other hand. The first key picture held the pan up beside her, its face toward the viewer, which looked unnatural (and so did the video made from it, which was thrown away).
+   The second one has her arm stretched forward and a little down, the pan held out in front of her pointing away from her toward the viewer, the spatula low at her side. The owner approved it before the video was made.
+2. **Video.** One video (720p, 6 seconds, 896 x 1024, 24 a second): she flicks the pancake up, it flips in the air and she catches it, twice. The pair of frames 72 apart that differ least (frames 69 and 141 of the 145; a difference of 0.4 of a 12-a-second step) closes the loop.
+   Every second frame of that stretch is a picture: 36 pictures at 12 a second.
+3. **Cutting out.** Each frame was cut out of the magenta with the studio's matting (key magenta, with the cleaning of pink leftovers), scaled to 940 x 1070 and saved as lossy WebP (quality 90, lossless transparency).
+4. **Position.** One common shift (1 pixel left, 1 down) puts her head where it is in `neutral`; her own movement is kept.
+5. **Talking set.** `activity-cooking-talk-N`: her closed mouth erased and an open mouth from her `cheer-1` pasted in, three sizes in the order 2, 2, 3, 3, 2, 2, 1, 1, 3, 3, 2, 2 and so on. In four pictures (18, 20, 25, 26) the flying pancake covers her mouth, so the talking picture is the silent one.
+   The mouth position comes from the `neutral` picture's eyes moved with her head's own movement (the eye finder cannot find her pale iris in a small video head); the area erased around the closed mouth was widened, and a second pass erases the darkest pixels around it, because the smile line of some frames was wider than the first pass.
+
+### Faults that are left
+
+- Looked at as contact sheets, every talking face at small size and the loop as a GIF, not every picture at full size.
+- The pancake passes in front of her face and eyes for about ten pictures of the loop (it is thrown up in front of her), so her face is hidden for a moment each time; her head and the pan move a little.
+- The pictures are soft, as the video is only 896 x 1024. The earlier four-picture loop is kept in the owner's `ref/` folder.
 
 ## Licence
 
